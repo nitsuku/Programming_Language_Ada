@@ -1,0 +1,105 @@
+V "GNAT Lib v2016"
+M P W=b
+A -O2
+A -gnatA
+A -g
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U main%b		main.adb		22acae18 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+W ada.text_io.integer_io%s
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+D ada.ads		20160516092928 3ffc8e18 ada%s
+D a-except.ads		20160516092928 291912d5 ada.exceptions%s
+D a-ioexce.ads		20160516092926 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
+D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
+D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
+D a-tiinau.ads		20160516092930 8114c8e4 ada.text_io.integer_aux%s
+D a-tiinio.ads		20160516092928 aa04e5d6 ada.text_io.integer_io%s
+D a-tiinio.adb		20160516092930 df9cd7af ada.text_io.integer_io%b
+D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20160516092928 5ab55268 interfaces%s
+D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
+D main.adb		20161020045002 1ac15bcc main%b
+D system.ads		20160516092930 2da59038 system%s
+D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
+D s-exctab.ads		20160516092930 54135002 system.exception_table%s
+D s-ficobl.ads		20160516092932 078245e4 system.file_control_block%s
+D s-imgint.ads		20160516092928 02dbe0c2 system.img_int%s
+D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
+D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
+D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
+D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
+D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
+D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 13|1r6 1r23 6r26 96r25
+X 6 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 1r27 6r30 96r29
+166U14*New_Line 13|107s25
+240U14*Get 13|96s37
+242U14*Put 13|82s4 87s9 95s25 97s25 105s33
+263U14*Put_Line 13|89s9 103s25
+X 8 a-tiinio.ads
+46k21*Integer_IO 85e27 13|6r38
+56U14 Get 13|84s14[6] 88s16[6] 99s40[6]
+57i7 Item{integer} 13|84r18[6] 88r20[6] 99r44[6]
+X 13 main.adb
+4U11*main 4b11 112l5 112t9
+6K12 Int_IO[8|46] 84r7 88r9 99r33
+9E9 Response_Type 9e54 10r8
+9n28 Disagree{9E9} 10r28
+9n38 Neutral{9E9} 11r28
+9n47 Agree{9E9} 12r28
+16A9 View_Type(integer)<integer> 21r13 52r37 77r16 83r23 98r44 104r44
+18R9 Candidate_Type 22e14 24r62
+20a6 name{string} 59r80 96m61 103r96
+21a6 view{16A9} 60r58 61r70 63r82 65r88 99m71 105r75
+24A9 Candidate_List_Type(18R9)<integer> 53r42 92r35
+26R9 Candidate_Scores_Type 30e17 32r63
+28a10 name{string} 41r43 59m41
+29i10 value{integer} 69m41
+32A9 Candidate_Score_Type(26R9)<integer> 34r35 55r21
+34U14 Best 34b14 34>19 35>18 45l8 45t12 72s7
+34a19 Candidates{32A9} 36r33 41r23
+35i18 size{integer} 39r25
+36a10 result{string} 41m13
+39i11 Current{integer} 40r13 41r34
+52U14 Compare 52b14 52>22 53>22 73l8 73t15 110s7
+52a22 User_View{16A9} 61r16 63r22 65r27
+53a22 Candidate_List{24A9} 55r43 58r29 59r49 60r27 61r39 63r51 65r57 72r25
+54i7 score{integer} 62m15 62r26 64m19 64r30 66m22 66r33 69r50
+55a7 Cand_Scores{32A9} 59m13 69m13 72r12
+58i11 Each_Candidate{integer} 59r25 59r64 60r42 61r54 63r66 65r72 69r25
+60i14 Each_View{integer} 61r26 61r75 63r32 63r87 65r37 65r93
+77a4 User_View{16A9} 84m26 84r26 110r15
+80i4 Num_Of_Cand{integer} 88m28 89r51 92r59
+83i8 View_Number{integer} 84r36
+92a17 Candidate_Views{24A9} 94r26 96m42 96r42 99m52 99r52 102r26 103r77 105r54
+. 110r26
+94i21 x{integer} 96r58 99r68
+98i29 View_Number{integer} 99r76
+102i21 x{integer} 103r66 103r93 105r71
+104i29 View_Number{integer} 105r81
+
