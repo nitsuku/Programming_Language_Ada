@@ -1,11 +1,11 @@
 V "GNAT Lib v2016"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=pentium4
 P ZX
 
 RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
 RV NO_IO
@@ -14,16 +14,14 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		7feca6b3 NE OO SU IL
+U candidate%b		candidate.adb		1d13b711 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
-W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
 W ada.text_io.integer_io%s
-W candidate%s		candidate.adb		candidate.ali
-W system.concat_2%s	s-conca2.adb		s-conca2.ali
-W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+U candidate%s		candidate.ads		7606bc85 EE NE OO PK
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-except.ads		20160516092928 291912d5 ada.exceptions%s
@@ -36,15 +34,13 @@ D a-tiinio.ads		20160516092928 aa04e5d6 ada.text_io.integer_io%s
 D a-tiinio.adb		20160516092930 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
 D candidate.ads		20161023165434 7606bc85 candidate%s
+D candidate.adb		20161023164336 5378fe40 candidate%b
 D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
-D main.adb		20161023164432 3187efe2 main%b
 D system.ads		20160516092930 2da59038 system%s
-D s-conca2.ads		20160516092930 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
 D s-exctab.ads		20160516092930 54135002 system.exception_table%s
 D s-ficobl.ads		20160516092932 078245e4 system.file_control_block%s
-D s-imgint.ads		20160516092928 02dbe0c2 system.img_int%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
 D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
 D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
@@ -54,33 +50,42 @@ D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 19e8 14|1r6 1r23 16r26
+16K9*Ada 19e8 12|1r6 2r5 5r26 63r10
 X 6 a-textio.ads
-49K13*Text_IO 471e16 14|1w10 1r27 16r30
-242U14*Put 14|47s4
-263U14*Put_Line 14|49s4
+49K13*Text_IO 471e16 12|1w10 2r9 5r30 63r14
+240U14*Get 12|63s22
+242U14*Put 12|53s7 62s10
+263U14*Put_Line 12|13s13
 X 8 a-tiinio.ads
-46k21*Integer_IO 85e27 14|16r38
-56U14 Get 14|48s11[16]
-57i7 Item{integer} 14|48r15[16]
+46k21*Integer_IO 85e27 12|5r38
+56U14*Get 12|55s17[5]
+57i7 Item{integer} 12|55r21[5]
 X 11 candidate.ads
-1K9*Candidate 42e14 14|3w6 3r21 22r16 28r16 38r19 42r5 43r4 56r7
-6A9*View_Type(integer)<integer> 14|22r26 38r29
-17A9*Candidate_List_Type(9R9)<integer> 14|28r26 52r25
-25U14*Best 14|43s14 58s7
-25a19 Candidates{17A9} 14|43r19 58r12
-26i18 Max_Score{integer} 14|43r44 58r43
-33U14*Compare 14|42s15 57s7
-37U14*Get 14|45s4
-39U14*Get 14|56s17
-39a19 Candidates{17A9} 14|56r21
-X 14 main.adb
-14U11*main 14b11 61l5 61t9
-16K12 Int_IO[8|46] 48r4
-22a4 User_View{11|6A9} 45m8 57r15
-25i4 Num_Of_Cand{integer} 48m23 49r46 52r49
-26i4 Max{integer} 42m48 43r57 57m43 58r56
-28a4 Data_Set1{11|17A9} 42m37 42r37 43r33
-38a4 Data_SetUser{11|6A9} 42r23
-52a7 Candidate_Views{11|17A9} 56m35 57m26 57r26 58r26
+1K9*Candidate 42l5 42e14 12|3b14 72l5 72t14
+6A9*View_Type(integer)<integer> 12r17 33r37 37r30 12|24r37 51r30 54r26
+9R9*Candidate_Type 14e14 17r62
+11a6*name{string} 12|13r44 63m41
+12a10*view{6A9} 12|31r58 32r70 36r81 37r81 64m29
+13i10*score{integer} 12|12r34 34m56 34r98 38m52 38r94 41r44 42r56 65m24
+17A9*Candidate_List_Type(9R9)<integer> 25r35 34r46 39r36 12|8r35 25r46 59r36
+25U14*Best 25>19 26>18 12|8b14 17l8 17t12
+25a19 Candidates{17A9} 12|8b19 11r23 12r13 13r23
+26i18 Max_Score{integer} 12|9b18 12r42
+33U14*Compare 33>22 34=22 35<21 12|24b14 45l8 45t15
+33a22 User_View{6A9} 12|24b22 32r16 33r19 36r20 37r20
+34a22 Candidate_List{17A9} 12|25b22 29r29 31r27 32r39 34m25 34r67 36r50 37r50
+. 38m21 38r63 41r13 42r25
+35i21 Max_Score{integer} 12|26b21 28m7 41r52 42m12
+37U14*Get 37<19 12|51b14 57l8 57t11 64s10
+37a19 View{6A9} 12|51b19 55m29 55r29
+39U14*Get 39<19 12|59b14 67l8 67t11
+39a19 Candidates{17A9} 12|59b19 61r16 63m27 63r27 64m15 64r15 65m10
+X 12 candidate.adb
+5K12 INT_IO[8|46] 55r10
+11i11 Iterator{integer} 12r24 13r34
+29i11 Each_Candidate{integer} 31r42 32r54 34r40 34r82 36r65 37r65 38r36 38r78
+. 41r28 42r40
+31i14 Each_View{integer} 32r26 32r75 33r29 36r30 36r86 37r30 37r86
+54i11 View_Number{integer} 55r34
+61i11 x{integer} 63r38 64r26 65r21
 

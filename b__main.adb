@@ -27,6 +27,7 @@ package body ada_main is
    E015 : Short_Integer; pragma Import (Ada, E015, "system__secondary_stack_E");
    E034 : Short_Integer; pragma Import (Ada, E034, "system__traceback__symbolic_E");
    E092 : Short_Integer; pragma Import (Ada, E092, "ada__text_io_E");
+   E123 : Short_Integer; pragma Import (Ada, E123, "candidate_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -183,6 +184,7 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E092 := E092 + 1;
+      E123 := E123 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -218,9 +220,10 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\Nick\Desktop\Ada\main.o
-   --   -LC:\Users\Nick\Desktop\Ada\
-   --   -LC:\Users\Nick\Desktop\Ada\
+   --   C:\Users\Nick\Desktop\Ada\Hw\candidate.o
+   --   C:\Users\Nick\Desktop\Ada\Hw\main.o
+   --   -LC:\Users\Nick\Desktop\Ada\Hw\
+   --   -LC:\Users\Nick\Desktop\Ada\Hw\
    --   -LC:/gnat/2016/lib/gcc/i686-pc-mingw32/4.9.4/adalib/
    --   -static
    --   -lgnat
