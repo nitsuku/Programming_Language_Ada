@@ -1,86 +1,80 @@
-V "GNAT Lib v2016"
+V "GNAT Lib v2012"
 M P W=b
+A -O2
+A -g
 A -gnatA
-A -mtune=generic
-A -march=pentium4
 P ZX
+R nnnnnnnnnnnnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnvnnnnnnvnnnnnnnnnnnnnn
 
-RN
-RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTIONS
-RV NO_IO
-RV NO_STANDARD_STORAGE_POOLS
-RV NO_DYNAMIC_SIZED_OBJECTS
-RV NO_IMPLEMENTATION_PRAGMAS
-RV SPARK_05
-
-U main%b		main.adb		7feca6b3 NE OO SU IL
+U main%b		main.adb		085d671a NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
-W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
 W ada.text_io.integer_io%s
 W candidate%s		candidate.adb		candidate.ali
-W system.concat_2%s	s-conca2.adb		s-conca2.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 
-D ada.ads		20160516092928 3ffc8e18 ada%s
-D a-except.ads		20160516092928 291912d5 ada.exceptions%s
-D a-ioexce.ads		20160516092926 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
-D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
-D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
-D a-tiinau.ads		20160516092930 8114c8e4 ada.text_io.integer_aux%s
-D a-tiinio.ads		20160516092928 aa04e5d6 ada.text_io.integer_io%s
-D a-tiinio.adb		20160516092930 df9cd7af ada.text_io.integer_io%b
-D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D candidate.ads		20161023165434 7606bc85 candidate%s
-D interfac.ads		20160516092928 5ab55268 interfaces%s
-D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
-D main.adb		20161023164432 3187efe2 main%b
-D system.ads		20160516092930 2da59038 system%s
-D s-conca2.ads		20160516092930 02a0d7d0 system.concat_2%s
-D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
-D s-exctab.ads		20160516092930 54135002 system.exception_table%s
-D s-ficobl.ads		20160516092932 078245e4 system.file_control_block%s
-D s-imgint.ads		20160516092928 02dbe0c2 system.img_int%s
-D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
-D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
-D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
-D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
-D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
-D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
-D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
+D ada.ads		20120510125802 3ffc8e18
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125752 52ecdc1b
+D a-ioexce.ads		20120510125752 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125758 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-tiinau.ads		20120510125800 8114c8e4
+D a-tiinio.ads		20120510125800 aa04e5d6
+D a-tiinio.adb		20120510125800 df9cd7af
+D a-unccon.ads		20120510125800 f9eb8f06
+D candidate.ads		20161024182222 7606bc85
+D interfac.ads		20120510125814 129923ea
+D i-cstrea.ads		20120510125814 1bd72c32
+D main.adb		20161024183708 46362e4b
+D system.ads		20120510125846 6daf90c4
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125824 443b9d66
+D s-finmas.ads		20120510125824 b95bb341
+D s-finroo.ads		20120510125824 4ff27390
+D s-imgint.ads		20120510125826 02dbe0c2
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-soflin.ads		20120510125832 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 14|1r6 1r23 16r26
-X 6 a-textio.ads
-49K13*Text_IO 471e16 14|1w10 1r27 16r30
-242U14*Put 14|47s4
-263U14*Put_Line 14|49s4
-X 8 a-tiinio.ads
-46k21*Integer_IO 85e27 14|16r38
-56U14 Get 14|48s11[16]
-57i7 Item{integer} 14|48r15[16]
-X 11 candidate.ads
-1K9*Candidate 42e14 14|3w6 3r21 22r16 28r16 38r19 42r5 43r4 56r7
-6A9*View_Type(integer)<integer> 14|22r26 38r29
-17A9*Candidate_List_Type(9R9)<integer> 14|28r26 52r25
-25U14*Best 14|43s14 58s7
-25a19 Candidates{17A9} 14|43r19 58r12
-26i18 Max_Score{integer} 14|43r44 58r43
-33U14*Compare 14|42s15 57s7
-37U14*Get 14|45s4
-39U14*Get 14|56s17
-39a19 Candidates{17A9} 14|56r21
-X 14 main.adb
-14U11*main 14b11 61l5 61t9
-16K12 Int_IO[8|46] 48r4
-22a4 User_View{11|6A9} 45m8 57r15
-25i4 Num_Of_Cand{integer} 48m23 49r46 52r49
-26i4 Max{integer} 42m48 43r57 57m43 58r56
-28a4 Data_Set1{11|17A9} 42m37 42r37 43r33
-38a4 Data_SetUser{11|6A9} 42r23
-52a7 Candidate_Views{11|17A9} 56m35 57m26 57r26 58r26
+16K9*Ada 19e8 15|1r6 1r23 16r26
+X 7 a-textio.ads
+49K13*Text_IO 471e16 15|1w10 1r27 16r30
+242U14*Put 15|65s4
+263U14*Put_Line 15|62s4 67s4
+X 9 a-tiinio.ads
+45k21*Integer_IO 84e27 15|16r38
+55U14 Get 15|66s11[16]
+56i7 Item{integer} 15|66r15[16]
+X 12 candidate.ads
+1K9*Candidate 53e14 15|3w6 3r21 22r16 64r4 73r7
+13A9*View_Type(integer)<integer> 15|22r26
+24A9*Candidate_List_Type(16R9)<integer> 15|70r25
+32U14*Best 15|75s7
+32a19 Candidates{24A9} 15|75r12
+33i18 Max_Score{integer} 15|75r43
+40U14*Compare 15|74s7
+46U14*Get 15|64s14
+46a19 View{13A9} 15|64r18
+50U14*Get 15|73s17
+50a19 Candidates{24A9} 15|73r21
+X 15 main.adb
+14U11*main 14b11 78l5 78t9
+16K12 Int_IO[9|45] 66r4
+22a4 User_View{12|13A9} 64m26 64r26 74r15
+25i4 Num_Of_Cand{integer} 66m23 66r23 67r46 70r49
+28i4 Max{integer} 74m43 74r43 75r56
+70a7 Candidate_Views{12|24A9} 73m35 73r35 74m26 74r26 75r26
 

@@ -1,20 +1,11 @@
-V "GNAT Lib v2016"
+V "GNAT Lib v2012"
+A -O2
+A -g
 A -gnatA
-A -mtune=generic
-A -march=pentium4
 P ZX
+R nnnnnnnnnnvnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnvnnnvnnvnnnnnnnnnnnnnn
 
-RN
-RV NO_DIRECT_BOOLEAN_OPERATORS
-RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTIONS
-RV NO_IO
-RV NO_STANDARD_STORAGE_POOLS
-RV NO_DYNAMIC_SIZED_OBJECTS
-RV NO_IMPLEMENTATION_PRAGMAS
-RV SPARK_05
-
-U candidate%b		candidate.adb		1d13b711 NE OO PK
+U candidate%b		candidate.adb		fea0d4a3 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -23,69 +14,76 @@ W ada.text_io.integer_io%s
 
 U candidate%s		candidate.ads		7606bc85 EE NE OO PK
 
-D ada.ads		20160516092928 3ffc8e18 ada%s
-D a-except.ads		20160516092928 291912d5 ada.exceptions%s
-D a-ioexce.ads		20160516092926 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
-D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
-D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
-D a-tiinau.ads		20160516092930 8114c8e4 ada.text_io.integer_aux%s
-D a-tiinio.ads		20160516092928 aa04e5d6 ada.text_io.integer_io%s
-D a-tiinio.adb		20160516092930 df9cd7af ada.text_io.integer_io%b
-D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D candidate.ads		20161023165434 7606bc85 candidate%s
-D candidate.adb		20161023164336 5378fe40 candidate%b
-D interfac.ads		20160516092928 5ab55268 interfaces%s
-D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
-D system.ads		20160516092930 2da59038 system%s
-D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
-D s-exctab.ads		20160516092930 54135002 system.exception_table%s
-D s-ficobl.ads		20160516092932 078245e4 system.file_control_block%s
-D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
-D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
-D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
-D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
-D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
-D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
-D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
+D ada.ads		20120510125802 3ffc8e18
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125752 52ecdc1b
+D a-ioexce.ads		20120510125752 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125758 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-tiinau.ads		20120510125800 8114c8e4
+D a-tiinio.ads		20120510125800 aa04e5d6
+D a-tiinio.adb		20120510125800 df9cd7af
+D a-unccon.ads		20120510125800 f9eb8f06
+D candidate.ads		20161024182222 7606bc85
+D candidate.adb		20161024182728 b0cb9df2
+D interfac.ads		20120510125814 129923ea
+D i-cstrea.ads		20120510125814 1bd72c32
+D system.ads		20120510125846 6daf90c4
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125824 443b9d66
+D s-finmas.ads		20120510125824 b95bb341
+D s-finroo.ads		20120510125824 4ff27390
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-soflin.ads		20120510125832 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 12|1r6 2r5 5r26 63r10
-X 6 a-textio.ads
-49K13*Text_IO 471e16 12|1w10 2r9 5r30 63r14
-240U14*Get 12|63s22
-242U14*Put 12|53s7 62s10
-263U14*Put_Line 12|13s13
-X 8 a-tiinio.ads
-46k21*Integer_IO 85e27 12|5r38
-56U14*Get 12|55s17[5]
-57i7 Item{integer} 12|55r21[5]
-X 11 candidate.ads
-1K9*Candidate 42l5 42e14 12|3b14 72l5 72t14
-6A9*View_Type(integer)<integer> 12r17 33r37 37r30 12|24r37 51r30 54r26
-9R9*Candidate_Type 14e14 17r62
-11a6*name{string} 12|13r44 63m41
-12a10*view{6A9} 12|31r58 32r70 36r81 37r81 64m29
-13i10*score{integer} 12|12r34 34m56 34r98 38m52 38r94 41r44 42r56 65m24
-17A9*Candidate_List_Type(9R9)<integer> 25r35 34r46 39r36 12|8r35 25r46 59r36
-25U14*Best 25>19 26>18 12|8b14 17l8 17t12
-25a19 Candidates{17A9} 12|8b19 11r23 12r13 13r23
-26i18 Max_Score{integer} 12|9b18 12r42
-33U14*Compare 33>22 34=22 35<21 12|24b14 45l8 45t15
-33a22 User_View{6A9} 12|24b22 32r16 33r19 36r20 37r20
-34a22 Candidate_List{17A9} 12|25b22 29r29 31r27 32r39 34m25 34r67 36r50 37r50
-. 38m21 38r63 41r13 42r25
-35i21 Max_Score{integer} 12|26b21 28m7 41r52 42m12
-37U14*Get 37<19 12|51b14 57l8 57t11 64s10
-37a19 View{6A9} 12|51b19 55m29 55r29
-39U14*Get 39<19 12|59b14 67l8 67t11
-39a19 Candidates{17A9} 12|59b19 61r16 63m27 63r27 64m15 64r15 65m10
-X 12 candidate.adb
-5K12 INT_IO[8|46] 55r10
-11i11 Iterator{integer} 12r24 13r34
-29i11 Each_Candidate{integer} 31r42 32r54 34r40 34r82 36r65 37r65 38r36 38r78
-. 41r28 42r40
-31i14 Each_View{integer} 32r26 32r75 33r29 36r30 36r86 37r30 37r86
-54i11 View_Number{integer} 55r34
-61i11 x{integer} 63r38 64r26 65r21
+16K9*Ada 19e8 13|1r6 2r5 13r26 75r10
+X 7 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 2r9 13r30 75r14
+240U14*Get 13|75s22
+242U14*Put 13|63s7 74s10
+263U14*Put_Line 13|21s13
+X 9 a-tiinio.ads
+45k21*Integer_IO 84e27 13|13r38
+55U14*Get 13|65s17[13]
+56i7 Item{integer} 13|65r21[13]
+X 12 candidate.ads
+1K9*Candidate 53l5 53e14 13|11b14 84l5 84t14
+13A9*View_Type(integer)<integer> 19r17 40r37 46r30 13|32r37 61r30 64r26
+16R9*Candidate_Type 21e14 24r62
+18a6*name{string} 13|21r44 75m41
+19a10*view{13A9} 13|39r58 40r70 44r81 45r81 76m29
+20i10*score{integer} 13|20r34 42m56 42r98 46m52 46r94 49r44 50r56 77m24
+24A9*Candidate_List_Type(16R9)<integer> 32r35 41r46 50r36 13|16r35 33r46
+. 71r36
+32U14*Best 32>19 33>18 13|16b14 25l8 25t12
+32a19 Candidates{24A9} 13|16b19 19r23 20r13 21r23
+33i18 Max_Score{integer} 13|17b18 20r42
+40U14*Compare 40>22 41=22 42<21 13|32b14 53l8 53t15
+40a22 User_View{13A9} 13|32b22 40r16 41r19 44r20 45r20
+41a22 Candidate_List{24A9} 13|33b22 37r29 39r27 40r39 42m25 42r67 44r50 45r50
+. 46m21 46r63 49r13 50r25
+42i21 Max_Score{integer} 13|34b21 36m7 49r52 50m12
+46U14*Get 46<19 13|61b14 67l8 67t11 76s10
+46a19 View{13A9} 13|61b19 65m29 65r29
+50U14*Get 50<19 13|71b14 79l8 79t11
+50a19 Candidates{24A9} 13|71b19 73r16 75m27 75r27 76m15 76r15 77m10
+X 13 candidate.adb
+13K12 INT_IO[9|45] 65r10
+19i11 Iterator{integer} 20r24 21r34
+37i11 Each_Candidate{integer} 39r42 40r54 42r40 42r82 44r65 45r65 46r36 46r78
+. 49r28 50r40
+39i14 Each_View{integer} 40r26 40r75 41r29 44r30 44r86 45r30 45r86
+64i11 View_Number{integer} 65r34
+73i11 x{integer} 75r38 76r26 77r21
 

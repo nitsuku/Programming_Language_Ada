@@ -1,4 +1,11 @@
 package Candidate is
+--
+--Program Made for a Programming Language Class Homework
+--Program take's user input for views, and compares those
+--views to input candidates to determine strongest matches.
+--
+--@Author: Nick Faccenda, Amanda Verno, Tin Buzancic
+--@Version 10-23-2016
 
 
 
@@ -34,8 +41,12 @@ package Candidate is
 		     Candidate_List : In Out Candidate_List_Type ;
 		    Max_Score : Out Integer) ;
 
+   --Obtain user input for the views to be used in
+   --the View_Type struct
    procedure Get( View : out View_Type );
 
+   --Obtain user input for the candidates name,
+   --then uses Get above to get the correct View assigned
    procedure Get( Candidates : out Candidate_List_Type );
 
 
