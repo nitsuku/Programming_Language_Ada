@@ -1,6 +1,0 @@
-project ADA1 is
-
-   for Main use ("main.adb");
-
-end ADA1;
-
